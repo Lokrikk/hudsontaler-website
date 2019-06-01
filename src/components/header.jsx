@@ -9,7 +9,7 @@ export default class Header extends Component {
 
   generateButtons() {
     return this.props.buttonAttributes.map(button => {
-      return(<input type='button' name={button.name} onClick={this.props.updateLocation} value={button.value} key={button.name}></input>)
+      return(<input type='button' className='header-button' name={button.name} onClick={this.props.updateLocation} value={button.value} key={button.name}></input>)
     })
   }
 

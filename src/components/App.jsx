@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import '../assets/site.css';
 import Header from './header'
 import Footer from './footer'
 import Home from './home'
@@ -68,7 +68,9 @@ export default class App extends Component {
           updateLocation={this.updateLocation}
           buttonAttributes={buttonAttributes}
         />
-        {this.body()}
+        <div className='body'>
+          {this.body()}
+        </div>
         <Footer />
       </div>
     )
