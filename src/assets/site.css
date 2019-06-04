@@ -1,50 +1,68 @@
 .App {
-  display: flex;
-  text-align: center;
+  display: contents;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+.root {
+  position: fixed;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  margin: 0;
 }
 
 .body {
   font-family: Arial Black;
   font-size: medium;
-  margin-top: 100px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-
 }
 
 .header {
   position: fixed;
   width: 100%;
+  align-items: center;
+}
+
+.header .banner {
+  background-color: #00008B;
+  color: #FFFAFA;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFFAFA;
   display: flex;
   justify-content: space-around;
-  background-color: #00008B;
+}
+
+.header .nav{
+  background-color: #4169E1;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .header-button {
-  color: #FFFFFF;
+  color: #FFFAFA;
   background-color: inherit;
   border: none;
   font-size: calc(10px + 2vmin);
   font-family: Arial Black;
+}
+
+h2 {
+  font-size: calc(10px + 2vmin);
+  font-family: Arial Black;
+}
+
+.active {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #000000;
 }
 
 .footer {
@@ -60,6 +78,7 @@
 
 .gau {
   height: 70px;
+  margin: 10px
 }
 
 .gau img{

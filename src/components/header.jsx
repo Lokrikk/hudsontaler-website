@@ -9,14 +9,24 @@ export default class Header extends Component {
 
   generateButtons() {
     return this.props.buttonAttributes.map(button => {
-      return(<input type='button' className='header-button' name={button.name} onClick={this.props.updateLocation} value={button.value} key={button.name}></input>)
+      let className = 'header-button'
+      if(button.name.match(this.props.step)) {
+        className = className + ' active'
+      }
+
+      return(<input type='button' className={className} name={button.name} onClick={this.props.updateLocation} value={button.value} key={button.name}></input>)
     })
   }
 
   render() {
     return(
       <div className='header'>
-        {this.generateButtons()}
+        <div className='banner'>
+          <h2> GTEV Hudsontaler </h2>
+        </div>
+        <div className='nav'>
+          {this.generateButtons()}
+        </div>
       </div>
     )
   }

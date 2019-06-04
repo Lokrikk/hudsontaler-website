@@ -32,10 +32,8 @@ export default class App extends Component {
   constructor(props){
     super(props)
     autobind(this)
-  }
 
-  componentDidMount() {
-    this.setState({step: 'home'})
+    this.state = {step: 'home'}
   }
 
   updateLocation(event){
@@ -67,6 +65,7 @@ export default class App extends Component {
         <Header
           updateLocation={this.updateLocation}
           buttonAttributes={buttonAttributes}
+          step={this.state.step || ''}
         />
         <div className='body'>
           {this.body()}
