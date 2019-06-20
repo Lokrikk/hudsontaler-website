@@ -8,7 +8,7 @@ const properties = {
   arrows: true
 }
 
-let images = ['../assets/images/slideshow/image1.jpg', '../assets/images/slideshow/image2.jpg']
+let images = ['images/slideshow/image1.jpg', 'images/slideshow/image2.jpg']
 
 export default class Photos extends Component {
   constructor(props) {
@@ -17,11 +17,12 @@ export default class Photos extends Component {
   }
 
   generateSlides() {
-    return images.map(image => {
+    console.log(process.env.PUBLIC_URL)
+    return images.map((image, index) => {
       return(
-        <div className="each-slide">
-          <div style={{'backgroundImage': `url(${image})`}}>
-            <span>Slide</span>
+        <div className="each-slide" key={index}>
+          <div style={{'backgroundImage': `url(http://localhost:3000/${image})`}}>
+            <span>Slide {index}</span>
           </div>
         </div>
       )
